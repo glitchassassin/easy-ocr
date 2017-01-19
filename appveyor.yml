@@ -29,7 +29,8 @@ before_build:
 
 - |
   cd ../sip
-  "%PYTHON%/python.exe" configure.py
+  dir
+  "%PYTHON%/python.exe" configure.py.in
   make
   make install
   cd ..
