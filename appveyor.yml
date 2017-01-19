@@ -10,7 +10,7 @@ matrix:
 
 install:
   - git submodule update --init --recursive
-  - "%PYTHON%/python.exe find_version.py" # Captures Tesseract version
+  - "%PYTHON%/python.exe" find_version.py # Captures Tesseract version
   - "%PYTHON%/python.exe" -m pip install --upgrade pip
 
 before_build:
