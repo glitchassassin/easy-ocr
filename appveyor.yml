@@ -7,6 +7,7 @@ environment:
 
 install:
   - |
+    dir C:\Program Files (x86)\
     git submodule update --init --recursive
     "%PYTHON%/python.exe" find_version.py
     "%PYTHON%/python.exe" -m pip install --upgrade pip
@@ -31,7 +32,7 @@ before_build:
   cd ../sip-4.19
   dir
   "%PYTHON%/python.exe" configure.py  --platform win32-g++
-  nmake
+  C:\Program Files (x86)\Microsoft Visual Studio xx.x\VC\binnmake
   nmake install
   cd ..
   dir
