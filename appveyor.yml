@@ -27,8 +27,21 @@ build_script:
 - cmake .. -G "%BUILD_ENV%" -DBUILD_TRAINING_TOOLS=Off -DAPPVEYOR=1
 - cmake --build . --config Release
 
+- cd ../..
+- mkdir include
+- mkdir include/tesseract
+- mkdir include/leptonica
+- cp tesseract/build/bin/Release/tesseract*.dll include/tesseract/tesseract.dll
+- cp tesseract/build/bin/Release/*leptonica*.dll include/leptonica/leptonica.dll
+
+- cd python-tesseract-sip
+- "%PYTHON%/python.exe" setup.py bdist_wheel
+
 test_script:
 - dir
-- dir bin
-- dir bin\Release
-- dir Release
+- dir dist
+- dir build
+
+artifacts:
+- path: python-tesseract-sip\dist\*.whl
+  name: wheels
