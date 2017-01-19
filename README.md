@@ -7,5 +7,5 @@ Most Python-Tesseract wrappers require you to already have Tesseract installed. 
 
 1. Update submodules (tesseract)
     * Pull Tesseract version
-2. Compile Tesseract wrapper
-3. 
+2. Compile Tesseract and Leptonica binaries
+3. Build python-tesseract-sip wrapper
