@@ -13,6 +13,8 @@ install:
 
     hg clone https://www.riverbankcomputing.com/hg/sip sip
 
+    dir
+
 before_build:
 - |
   cd tesseract # Tesseract setup
@@ -31,6 +33,7 @@ before_build:
   make
   make install
   cd ..
+  dir
 
 
 build_script:
