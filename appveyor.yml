@@ -11,8 +11,8 @@ install:
     "%PYTHON%/python.exe" find_version.py
     "%PYTHON%/python.exe" -m pip install --upgrade pip
 
-    hg clone https://www.riverbankcomputing.com/hg/sip sip
-
+    curl -L https://sourceforge.net/projects/pyqt/files/sip/sip-4.19/sip-4.19.zip
+    7z x sip-4.19.zip
     dir
 
 before_build:
@@ -28,9 +28,9 @@ before_build:
 - ps: 'Add-Content $env:USERPROFILE\.cppan\cppan.yml "`n`nbuild_system_verbose: false`n"'
 
 - |
-  cd ../sip
+  cd ../sip-4.19
   dir
-  "%PYTHON%/python.exe" configure.py.in
+  "%PYTHON%/python.exe" configure.py
   make
   make install
   cd ..
