@@ -31,8 +31,8 @@ build_script:
   cd ../..
   mkdir include\tesseract
   mkdir include\leptonica
-  cp tesseract\build\bin\Release\tesseract*.dll include\tesseract\tesseract.dll
-  cp tesseract\build\bin\Release\*leptonica*.dll include\leptonica\leptonica.dll
+  xcopy "tesseract\build\bin\Release\tesseract*.dll" .\include\tesseract\tesseract.dll
+  xcopy "tesseract\build\bin\Release\*leptonica*.dll" .\include\leptonica\leptonica.dll
 
   cd python-tesseract-sip
   "%PYTHON%/python.exe" setup.py bdist_wheel
