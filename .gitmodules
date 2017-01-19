@@ -1,3 +1,6 @@
 [submodule "tesseract"]
 	path = tesseract
 	url = https://github.com/tesseract-ocr/tesseract
+[submodule "python-tesseract-sip"]
+	path = python-tesseract-sip
+	url = https://github.com/virtuald/python-tesseract-sip
