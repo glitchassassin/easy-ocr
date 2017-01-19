@@ -30,6 +30,7 @@ before_build:
   "%PYTHON%/python.exe" configure.py
   make
   make install
+  cd ..
 
 
 build_script:
