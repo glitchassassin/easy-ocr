@@ -10,7 +10,8 @@ install:
     git submodule update --init --recursive
     "%PYTHON%/python.exe" find_version.py
     "%PYTHON%/python.exe" -m pip install --upgrade pip
-    "%PYTHON%/python.exe" -m pip install -r requirements.txt
+
+    hg clone https://www.riverbankcomputing.com/hg/sip sip
 
 before_build:
 - cd tesseract # Tesseract setup
@@ -22,8 +23,15 @@ before_build:
 - ps: 'Add-Content $env:USERPROFILE\.cppan\cppan.yml "`n`nbuild_warning_level: 0`n"'
 - ps: 'Add-Content $env:USERPROFILE\.cppan\cppan.yml "`n`nbuild_system_verbose: false`n"'
 
+- cd ../sip
+- "%PYTHON%/python.exe" configure.py
+- make
+- make install
+
+
 build_script:
 - |
+  cd tesseract
   mkdir build
   cd build
   cmake .. -G "%BUILD_ENV%" -DBUILD_TRAINING_TOOLS=Off -DAPPVEYOR=1
