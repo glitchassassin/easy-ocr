@@ -4,10 +4,6 @@ environment:
     BUILD_ENV: "Visual Studio 14"
     BUILD_DIR: "build"
     PYTHON_VERSION: "2.7"
-  - PYTHON: "C:/Python34"
-    BUILD_ENV: "Visual Studio 14"
-    BUILD_DIR: "build"
-    PYTHON_VERSION: "3.4"
 
 install:
   - |
@@ -33,3 +29,6 @@ build_script:
 
 test_script:
 - dir
+- dir bin
+- dir bin\Release
+- dir Release
