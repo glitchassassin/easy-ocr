@@ -1,12 +1,13 @@
-matrix:
-  - PYTHON: "C:/Python27"
-    BUILD_ENV: "Visual Studio 14"
-    BUILD_DIR: "build"
-    PYTHON_VERSION: "2.7"
-  - PYTHON: "C:/Python34"
-    BUILD_ENV: "Visual Studio 14"
-    BUILD_DIR: "build"
-    PYTHON_VERSION: "3.4"
+environment:
+  matrix:
+    - PYTHON: "C:/Python27"
+      BUILD_ENV: "Visual Studio 14"
+      BUILD_DIR: "build"
+      PYTHON_VERSION: "2.7"
+    - PYTHON: "C:/Python34"
+      BUILD_ENV: "Visual Studio 14"
+      BUILD_DIR: "build"
+      PYTHON_VERSION: "3.4"
 
 install:
   - git submodule update --init --recursive
