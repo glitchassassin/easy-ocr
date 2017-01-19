@@ -7,7 +7,7 @@ environment:
 
 install:
   - |
-    dir C:\Program Files (x86)\
+    dir "C:\Program Files (x86)\"
     git submodule update --init --recursive
     "%PYTHON%/python.exe" find_version.py
     "%PYTHON%/python.exe" -m pip install --upgrade pip
