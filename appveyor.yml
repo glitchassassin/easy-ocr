@@ -32,8 +32,8 @@ before_build:
   cd ../sip-4.19
   dir
   "%PYTHON%/python.exe" configure.py  --platform win32-g++
-  C:\Program Files (x86)\Microsoft Visual Studio xx.x\VC\binnmake
-  nmake install
+  "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\nmake.exe"
+  "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\nmake.exe" install
   cd ..
   dir
 
