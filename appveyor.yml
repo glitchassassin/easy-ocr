@@ -11,7 +11,7 @@ install:
     "%PYTHON%/python.exe" find_version.py
     "%PYTHON%/python.exe" -m pip install --upgrade pip
 
-    curl -L https://sourceforge.net/projects/pyqt/files/sip/sip-4.19/sip-4.19.zip
+    curl -fsS -L -o sip-4.19.zip https://sourceforge.net/projects/pyqt/files/sip/sip-4.19/sip-4.19.zip
     7z x sip-4.19.zip
     dir
 
