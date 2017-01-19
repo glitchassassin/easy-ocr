@@ -30,9 +30,9 @@ before_build:
 - |
   cd ../sip-4.19
   dir
-  "%PYTHON%/python.exe" configure.py
-  make
-  make install
+  "%PYTHON%/python.exe" configure.py  --platform win32-g++
+  nmake
+  nmake install
   cd ..
   dir
 
