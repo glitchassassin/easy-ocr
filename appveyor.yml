@@ -15,7 +15,7 @@ install:
     curl -fsS -L -o sip-4.19.zip https://sourceforge.net/projects/pyqt/files/sip/sip-4.19/sip-4.19.zip
     7z x sip-4.19.zip
     dir
-    set PATH=%PATH%;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\
+    "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat"
 
 before_build:
 - |
