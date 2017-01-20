@@ -55,7 +55,7 @@ build_script:
   xcopy "tesseract\build\bin\Release\*leptonica*.dll" .\include\leptonica\leptonica.dll /I
 
   cd python-tesseract-sip
-  "%PYTHON%/python.exe" setup.py bdist_wheel
+  "%PYTHON%/python.exe" setup.py bdist
 
 test_script:
 - dir
