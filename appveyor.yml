@@ -11,6 +11,7 @@ install:
     git submodule update --init --recursive
     "%PYTHON%/python.exe" find_version.py
     "%PYTHON%/python.exe" -m pip install --upgrade pip
+    "%PYTHON%/python.exe" -m pip install -r requirements.txt
 
     curl -fsS -L -o sip-4.19.zip https://sourceforge.net/projects/pyqt/files/sip/sip-4.19/sip-4.19.zip
     7z x sip-4.19.zip
