@@ -52,6 +52,7 @@ build_script:
   mkdir include\tesseract
   mkdir include\leptonica
   for /r "tesseract\" %%a in (*.h) do @copy /y "%%a" include\tesseract\
+  dir include\tesseract
   xcopy "tesseract\build\bin\Release\tesseract*.dll" .\include\tesseract\tesseract.dll /I
   xcopy "tesseract\build\bin\Release\*leptonica*.dll" .\include\leptonica\leptonica.dll /I
 
