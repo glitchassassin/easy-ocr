@@ -37,7 +37,7 @@ before_build:
 - |
   cd ../sip-4.19
   dir
-  "%PYTHON%/python.exe" configure.py --platform win32-msvc2015
+  "%PYTHON%/python.exe" configure.py --platform win32-msvc2008
   nmake
   nmake install
   cd ..
@@ -64,7 +64,7 @@ build_script:
   dir .\include\leptonica
 
   cd python-tesseract-sip
-  "%PYTHON%/python.exe" setup.py --sip-opts="-I ../sip-4.19" bdist
+  "%PYTHON%/python.exe" setup.py bdist
 
 test_script:
 - dir
