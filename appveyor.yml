@@ -27,7 +27,8 @@ before_build:
   7z x cppan.zip
   set PATH=%PATH%;%cd%
   cppan
-  $blockRdp = $true;
+
+- ps: $blockRdp = $true;
 
 - ps: 'Add-Content $env:USERPROFILE\.cppan\cppan.yml "`n`nvar_check_jobs: 1`n"'
 - ps: 'Add-Content $env:USERPROFILE\.cppan\cppan.yml "`n`nbuild_warning_level: 0`n"'
