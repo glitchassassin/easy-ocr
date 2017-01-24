@@ -4,3 +4,6 @@
 [submodule "python-tesseract-sip"]
 	path = python-tesseract-sip
 	url = https://github.com/virtuald/python-tesseract-sip
+[submodule "leptonica"]
+	path = leptonica
+	url = https://github.com/danbloomberg/leptonica
