@@ -1,0 +1,1 @@
+tesseract_version = "3.02"

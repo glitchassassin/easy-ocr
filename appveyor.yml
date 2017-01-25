@@ -14,7 +14,6 @@ install:
     cd tesseract
     git reset --hard be09fec7a20db58da4a0c694491c1f7783969769
     cd ..
-    "%PYTHON%/python.exe" find_version.py
     "%PYTHON%/python.exe" -m pip install --upgrade pip
     "%PYTHON%/python.exe" -m pip install -r requirements.txt
 
